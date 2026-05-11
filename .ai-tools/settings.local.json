@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file in .ai-tools/skills/frontend-dev-guidelines/resources/*.md)",
+      "Bash(done)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

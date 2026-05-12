@@ -220,6 +220,185 @@
                     "captureMessage"
                 ]
             }
+        },
+        "spec": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Define what to build before coding - spec before code",
+            "promptTriggers": {
+                "keywords": [
+                    "spec",
+                    "specification",
+                    "requirement",
+                    "prd",
+                    "define",
+                    "idea",
+                    "feature spec",
+                    "product requirement"
+                ],
+                "intentPatterns": [
+                    "(write|create|define).*?(spec|specification|requirement)",
+                    "(what|how).*?(should|need).*?(build|implement)",
+                    "define.*?(feature|requirement|scope)"
+                ]
+            }
+        },
+        "plan": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Plan how to build with small, atomic tasks",
+            "promptTriggers": {
+                "keywords": [
+                    "plan",
+                    "planning",
+                    "task",
+                    "breakdown",
+                    "implementation",
+                    "strategy",
+                    "task list",
+                    "implementation plan"
+                ],
+                "intentPatterns": [
+                    "(create|make|write).*?(plan|task list|breakdown)",
+                    "(how|what).*?(plan|implement|approach)",
+                    "break.*?down.*?(task|work)"
+                ]
+            }
+        },
+        "build": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Build incrementally with one slice at a time",
+            "promptTriggers": {
+                "keywords": [
+                    "build",
+                    "implement",
+                    "code",
+                    "develop",
+                    "feature",
+                    "implementation",
+                    "vertical slice"
+                ],
+                "intentPatterns": [
+                    "(build|implement|code|develop).*?(feature|functionality)",
+                    "start.*?(building|coding|implementing)",
+                    "add.*?(feature|implementation)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "src/**/*.ts",
+                    "src/**/*.tsx",
+                    "lib/**/*.ts",
+                    "app/**/*.ts"
+                ],
+                "pathExclusions": [
+                    "**/*.test.ts",
+                    "**/*.spec.ts",
+                    "**/*.test.tsx"
+                ]
+            }
+        },
+        "test": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Prove it works with tests as proof",
+            "promptTriggers": {
+                "keywords": [
+                    "test",
+                    "testing",
+                    "verify",
+                    "validate",
+                    "prove",
+                    "assertion",
+                    "unit test",
+                    "integration test"
+                ],
+                "intentPatterns": [
+                    "(write|create|add).*?(test|spec)",
+                    "(verify|validate|prove).*?(works|correct)",
+                    "test.*?(this|code|implementation)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/*.test.ts",
+                    "**/*.test.tsx",
+                    "**/*.spec.ts",
+                    "**/*.spec.tsx",
+                    "**/__tests__/**/*"
+                ]
+            }
+        },
+        "review": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Review before merge to improve code health",
+            "promptTriggers": {
+                "keywords": [
+                    "review",
+                    "code review",
+                    "pr",
+                    "pull request",
+                    "merge",
+                    "approval",
+                    "code quality"
+                ],
+                "intentPatterns": [
+                    "(review|check).*?(code|pr|pull request)",
+                    "ready.*?(merge|review)",
+                    "(approve|reject).*?(pr|pull request)"
+                ]
+            }
+        },
+        "code-simplify": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "medium",
+            "description": "Simplify code with clarity over cleverness",
+            "promptTriggers": {
+                "keywords": [
+                    "simplify",
+                    "refactor",
+                    "clean",
+                    "clarify",
+                    "readability",
+                    "complexity",
+                    "make it simple"
+                ],
+                "intentPatterns": [
+                    "(simplify|clean|clarify).*?(code|function)",
+                    "(reduce|lower).*?(complexity)",
+                    "improve.*?(readability|clarity)"
+                ]
+            }
+        },
+        "ship": {
+            "type": "lifecycle",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Ship to production faster is safer",
+            "promptTriggers": {
+                "keywords": [
+                    "ship",
+                    "deploy",
+                    "release",
+                    "production",
+                    "launch",
+                    "rollout",
+                    "deployment"
+                ],
+                "intentPatterns": [
+                    "(ship|deploy|release).*?(production|live)",
+                    "ready.*?(ship|deploy)",
+                    "(push|merge).*?(production|main)"
+                ]
+            }
         }
     },
     "notes": {

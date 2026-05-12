@@ -117,9 +117,17 @@ Attribution to original patterns and workflows is preserved in relevant componen
 
 ---
 
-## License
+## Supported AI Agents
+Agent Skills work with these AI coding agents:
 
-MIT License — Use freely in your projects, commercial or personal. See [LICENSE](LICENSE) for full terms.
+| Agent | Support | Location |
+|:------|:--------|:---------|
+| **GitHub Copilot** | ✅ Full Support | `.github/skills/` or `~/.copilot/skills/` |
+| **Claude Code** | ✅ Full Support | `.claude/skills/` or `~/.claude/skills/` |
+| **Cursor** | ✅ Full Support | `.cursor/rules/` |
+| **Windsurf** | ✅ Full Support | `.windsurf/rules/` |
+| **VS Code Insiders** | ✅ Full Support | Agent mode with skills |
+| **VS Code (Stable)** | ⏳ Coming Soon | Support coming in future release |
 
 ---
 

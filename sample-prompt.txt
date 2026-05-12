@@ -1,0 +1,44 @@
+I want to implement a user authentication feature for our platform microservice using Java Spring Boot and PostgreSQL database. The feature should allow users to:
+- Register with email and password
+- Login with JWT tokens
+- Reset password via email
+- Protect routes with authentication middleware
+
+Please follow the Company skills lifecycle to implement this feature:
+
+Step 1: Use /spec (01-define-spec.md) to clarify what we're building
+- Define the problem statement
+- Identify key assumptions
+- Determine MVP scope
+- List what we're not doing
+
+Step 2: Use /plan (02-plan.md) to break it down into tasks
+- Identify dependency graph
+- Slice vertically (DB + API + UI for each feature)
+- Write tasks with acceptance criteria
+- Add verification checkpoints
+
+Step 3: Use /build (03-build.md) to implement incrementally
+- Build one vertical slice at a time
+- Keep it compilable after each increment
+- Use feature flags for incomplete features
+- Commit after each slice
+
+Step 4: Use /test (04-verify-test.md) to verify with tests
+- Write failing tests first (RED)
+- Implement to make tests pass (GREEN)
+- Refactor with tests green (REFACTOR)
+- Use the Prove-It pattern for bug fixes
+
+Step 5: Use /review (05-review.md) to review before merge
+- Evaluate correctness, readability, architecture, security, performance
+- Categorize findings as Must Fix, Should Fix, Nice to Have
+- Ensure all five axes are covered
+
+Step 6: Use /ship (06-ship.md) to prepare for production
+- Complete pre-launch checklist
+- Set up feature flags for gradual rollout
+- Configure monitoring and observability
+- Document rollback strategy
+
+Execute each step sequentially, and provide a summary after each phase.
